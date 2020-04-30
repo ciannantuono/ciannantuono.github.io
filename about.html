@@ -12,28 +12,52 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="shortcut icon" type="image/ico" href="favicon.ico">
   <script src="nav.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
   <!--TopNav Bar-->
-  <div class="topnav" id="myTopnav">
-    <a href="home" class="active">Home</a>
-    <a href="about">About</a>
-    <div class="dropdown">
-      <button class="dropbtn">Portfolio
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="design">Design</a>
-        <a href="fabrication">Fabrication</a>
-        <a href="research">Research</a>
-      </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="index">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav hidden-xs">
+        <li><a href="about">About</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Portfolio
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="design">Design</a></li>
+          <li><a href="fabrication">Fabrication</a></li>
+          <li><a href="research">Research</a></li>
+        </ul>
+        <li><a href="shop">Shop</a></li>
+        <li><a href="contact">Contact</a></li>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+
+<div id="hamburger">
+      <a class="btn btn-info btn-md navbar-topright">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </a>
+</div>
+
     </div>
-    <a href="shop">Shop</a>
-    <a href="contact">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
+  </nav>
 
   <!--Video Background-->
   <video id="videoBG" poster="poster.JPG" autoplay loop muted playsinline>
