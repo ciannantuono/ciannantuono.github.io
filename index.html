@@ -10,11 +10,14 @@
       <title>welcome | tuono</title>
 
       <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+      <style>
+        body { margin: 0; cursor: url(cursor.png), pointer; }
+        canvas { display: block; cursor: url(cursor.png), pointer; }
+      </style>
     </head>
-
     <body>
       <div class="pointer">
-        <script src="js/pixi-v5.min.js"></script>
+        <script src="pixi-v5.min.js"></script>
         <script>
           let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
           document.body.appendChild(app.view);
@@ -25,18 +28,23 @@
           app.stage.addChild(img);
 
           depthMap = new PIXI.Sprite.from("imageMap.jpg");
-          img.width = window.innerWidth;
-          img.height = window.innerHeight;
+          depthMap.width = window.innerWidth;
+          depthMap.height = window.innerHeight;
           app.stage.addChild(depthMap);
 
           displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+          displacementFilter.width = window.innerWidth;
+          displacementFilter.height = window.innerHeight;
           app.stage.filters = [displacementFilter];
 
           window.onmousemove = function(e) {
-            displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /20;
-            displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
+          displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /10;
+          displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /10;
           }
 
+          document.addEventListener("click", function(){
+          window.location.href = "home.html";
+          });
         </script>
       </div>
     </body>
