@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Avenir Next";
   font-weight: lighter;
@@ -5,7 +9,7 @@ body {
 }
 
 header {
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, .9);
   box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
 }
 
@@ -69,6 +73,15 @@ video {
   z-index: -1;
 }
 
+section {
+  border-style: dashed;
+  float: left;
+  position: absolute;
+  top: 1000px;
+  margin-left: 80px;
+  z-index: -1;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -82,7 +95,7 @@ video {
 .topNavFrame {
   float: left;
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100%;
   border: none;
   outline: none;
@@ -106,7 +119,7 @@ video {
 .mouse {
   width: 25px;
   height: 50px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   border-radius: 25px;
   margin-bottom: 2px;
   display: flex;
@@ -116,7 +129,7 @@ video {
 .mouse span {
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #000;
   display: block;
   border-radius: 50%;
   margin: auto;
@@ -128,8 +141,8 @@ video {
   width: 10px;
   height: 10px;
   border: 2px solid transparent;
-  border-right-color: #fff;
-  border-bottom-color: #fff;
+  border-right-color: #000;
+  border-bottom-color: #000;
   transform: rotate(45deg);
   animation: arrow-down .75s alternate infinite;
 }
@@ -160,5 +173,7 @@ video {
   }
   100% {
     opacity: 1;
+    height: 13px;
+    width: 13px;
   }
 }
