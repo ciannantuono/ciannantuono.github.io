@@ -1,0 +1,95 @@
+body {
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  margin: auto;
+}
+
+header {
+  background: white;
+  opacity: 90%;
+  box-shadow: 0px 10px 50px #d1d1d1;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 80px;
+  margin-top: 40px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #444;
+
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  opacity: 75%;
+  padding: 10px 0;
+}
+
+.topNavFrame {
+  float: left;
+  display: block;
+  position: absolute;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.pointer {
+  cursor: url(cursor.png), pointer;
+}

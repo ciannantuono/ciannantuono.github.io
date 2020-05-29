@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+      <meta charset = "UTF-8">
+      <meta name = "description" content = "Description goes here">
+      <meta name = "keywords" content = "HTML, CSS, XML, JavaScript">
+      <meta name = "author" content = "Christian Iannantuono">
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+      <title>welcome | tuono</title>
+
+      <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+    </head>
+
+    <body>
+      <div class="pointer">
+        <script src="js/pixi-v5.min.js"></script>
+        <script>
+          let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
+          document.body.appendChild(app.view);
+
+          let img = new PIXI.Sprite.from("image.jpg");
+          img.width = window.innerWidth;
+          img.height = window.innerHeight;
+          app.stage.addChild(img);
+
+          depthMap = new PIXI.Sprite.from("imageMap.jpg");
+          img.width = window.innerWidth;
+          img.height = window.innerHeight;
+          app.stage.addChild(depthMap);
+
+          displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
+          app.stage.filters = [displacementFilter];
+
+          window.onmousemove = function(e) {
+            displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) /20;
+            displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
+          }
+
+        </script>
+      </div>
+    </body>
+
+ </html>
