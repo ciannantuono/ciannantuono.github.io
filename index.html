@@ -17,17 +17,17 @@
     </head>
     <body>
       <div class="pointer">
-        <script src="pixi-v5.min.js"></script>
+        <script src="js/pixi-v5.min.js"></script>
         <script>
           let app = new PIXI.Application({width: window.innerWidth, height: window.innerHeight});
           document.body.appendChild(app.view);
 
-          let img = new PIXI.Sprite.from("image.jpg");
+          let img = new PIXI.Sprite.from("assets/image.jpg");
           img.width = window.innerWidth;
           img.height = window.innerHeight;
           app.stage.addChild(img);
 
-          depthMap = new PIXI.Sprite.from("imageMap.jpg");
+          depthMap = new PIXI.Sprite.from("assets/imageMap.jpg");
           depthMap.width = window.innerWidth;
           depthMap.height = window.innerHeight;
           app.stage.addChild(depthMap);
