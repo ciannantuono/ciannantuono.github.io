@@ -14,13 +14,17 @@ footer {
   position: absolute;
   width: 100%;
   margin-top: 868px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 
 p1 {
   color: white;
   font-size: 12px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 header {
@@ -85,7 +89,7 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -300;
 }
 
 section {
@@ -95,6 +99,7 @@ section {
   top: 100px;
   padding-top: 50px;
   margin-left: 80px;
+  margin-right: 80px;
 }
 
 section1 {
@@ -123,6 +128,7 @@ section1 {
   width: 100%;
   border: none;
   outline: none;
+  z-index: 300;
 }
 
 .pointer {
